@@ -1,4 +1,4 @@
-// to start project: npm run start:dev
+// to start project: npm run start
 
 const express = require("express");
 const cors = require("cors");
@@ -8,13 +8,13 @@ const app = express();
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("Привет, мир!");
+  res.send("Hello, world!");
 });
 
 const PORT = process.env.PORT || 4444;
 
 app.listen(PORT, () => {
-  console.log(`Сервер запущен на порту ${PORT}`);
+  console.log(`Server running on http://localhost:${PORT} port.`);
 });
 
 app.get("/user/1", (req, res) => {
